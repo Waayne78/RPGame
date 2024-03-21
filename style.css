@@ -12,13 +12,16 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #ff0;
+
+
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 10px 50px;
     background-color: #000;
     color: #fff;
 }
@@ -41,16 +44,7 @@ ul {
     display: flex;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #ff0;
-    color: #000;
-    
-}
+
 
 .container h1 {
     font-size: 3em;
@@ -100,4 +94,64 @@ margin: 10px;
 
 }
 
+.player:first-of-type {
+    order: -1; 
+}
 
+.player:last-of-type {
+    order: 3; 
+}
+
+.container  {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    height: 100vh;
+    background-color: #ff0;
+    color: #000;
+    margin-bottom:10px;   
+}
+
+
+.player {
+    border: 1px solid #000;
+    padding: 20px;
+    margin: 10px;
+    flex: 0 0 auto; 
+    margin: auto; 
+}
+
+
+.zone {
+    order: 2; 
+    background-image: url(./dice-assets/VS.png);
+    height: 150px;
+    width: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.attack-message {
+    position: absolute;
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%);  
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.dice {
+    margin-bottom: 60px;
+    margin-top: -100px; 
+}
+
+.special-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+}
